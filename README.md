@@ -2,7 +2,7 @@
 
 A modern, responsive React weather application that displays real-time weather information using the Met Office DataHub API. Built with React, Vite, and Tailwind CSS.
 
-![Weather App Screenshot](docs/screenshot.png)
+![Weather App Screenshot](docs/weather-app-screenshot.png)
 
 ## Features
 
