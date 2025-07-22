@@ -178,7 +178,7 @@ class MetOfficeClient {
                     const delay = Math.pow(2, attempt) * 1000;
                     await new Promise(resolve => setTimeout(resolve, delay));
                 } else {
-                    throw new Error("ERROR: Failed to retrieve forecast after multiple attempts.");
+                    throw new Error("ERROR: Failed to retrieve forecast after multiple attempts." + ` Attempt ${attempt + 1} failed with error: ${error.message}`);
                 }
             }
         }
@@ -221,7 +221,7 @@ class MetOfficeClient {
                     const delay = Math.pow(2, attempt) * 1000;
                     await new Promise(resolve => setTimeout(resolve, delay));
                 } else {
-                    throw new Error("ERROR: Failed to retrieve forecast after multiple attempts.");
+                    throw new Error("ERROR: Failed to retrieve forecast after multiple attempts." + ` Attempt ${attempt + 1} failed with error: ${error.message}`);
                 }
             }
         }
