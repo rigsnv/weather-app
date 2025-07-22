@@ -23,7 +23,7 @@ const DailyForecast = ({ timeSeries, userTimezone, weatherCodeMap }) => {
             ).pop();
             return { ...day, minTemp, maxTemp, dominantCode };
         });
-    }, [timeSeries]);
+    }, [timeSeries, userTimezone]);
 
     return (
         <Card>
