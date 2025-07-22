@@ -4,8 +4,7 @@ import WeatherIcon from './ui/WeatherIcon';
 import dayjs from 'dayjs';
 
 const CurrentWeather = ({ data, locationName, userTimezone, weatherCodeMap }) => {
-    if (!data) return null;
-    const weather = weatherCodeMap[data.significantWeatherCode] || weatherCodeMap[4];
+    // Always call hooks at the top level
     const [time, setTime] = useState(dayjs().tz(userTimezone).format('h:mm A'));
 
     useEffect(() => {
@@ -14,6 +13,11 @@ const CurrentWeather = ({ data, locationName, userTimezone, weatherCodeMap }) =>
         }, 1000); // Update every minute
         return () => clearInterval(interval);
     }, [userTimezone]);
+
+    // Early return after hooks
+    if (!data) return null;
+    
+    const weather = weatherCodeMap[data.significantWeatherCode] || weatherCodeMap[4];
 
     return (
         <Card>
