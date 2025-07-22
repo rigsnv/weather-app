@@ -141,6 +141,8 @@ The `significantWeatherCode` represents different weather conditions:
 | 22-27 | Snow | CloudSnow |
 | 28-30 | Thunder | CloudLightning |
 
+Check [Met Office Code Definitions](https://www.metoffice.gov.uk/services/data/datapoint/code-definitions)
+
 ## Browser Geolocation API
 
 The app uses the browser's native geolocation API to determine user location.
